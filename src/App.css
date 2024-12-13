@@ -1,0 +1,37 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Flow+Circular&family=Honk&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.brand-orange {
+  color: #ff6503;
+}
+
+.brand-blue {
+  color: #0041a9;
+}
+
+.brandFont{
+  font-family: "Barlow", sans-serif;
+  font-weight: 600;
+  font-style: italic;
+}
+.barlow600{
+  font-family: "Barlow", sans-serif;
+  font-weight: 600;
+  font-style: italic;
+}
+
+.barlow200{
+  font-family: "Barlow", sans-serif;
+  font-weight: 200;
+  font-style: italic;
+}
+
+.bg-sec3{
+  width: 100%; /* Set your desired width */
+  height: 419px; /* Set your desired height */
+  background: linear-gradient(90deg, rgba(233, 240, 251, 1), rgba(198, 212, 238, 1));
+  border-radius: 14px;
+}
