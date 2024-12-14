@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Navbar from "../components/Navbar";
 import Marquee from "react-fast-marquee";
 import Slider1 from "../assets/slider1.png";
@@ -8,9 +8,43 @@ import Icon from "../assets/icons.png";
 import AppleIco from "../assets/apstore.png";
 import PlayStore from "../assets/playstore.png";
 import ImgStaff from "../assets/image-staff.png";
-import Vids from "../assets/animation.mp4"
+import Vids from "../assets/animation.mp4";
+import Pickup from "../assets/pickup.png";
+import Delivery from "../assets/delivery.png";
+import Errands from "../assets/errands.png";
+import Carousel from "react-multi-carousel";
+import ProfilePic from "../assets/profile0.png";
+import ProfilePic1 from "../assets/profile2.png";
+import ProfilePic2 from "../assets/profile3.png";
+import "react-multi-carousel/lib/styles.css";
 
 const Home = () => {
+  const responsive = {
+    superLargeDesktop: {
+      // the naming can be any, depends on you.
+      breakpoint: { max: 4000, min: 3000 },
+      items: 5,
+    },
+    desktop: {
+      breakpoint: { max: 3000, min: 1024 },
+      items: 3,
+    },
+    tablet: {
+      breakpoint: { max: 1024, min: 464 },
+      items: 2,
+    },
+    mobile: {
+      breakpoint: { max: 464, min: 0 },
+      items: 1,
+    },
+  };
+  const [rating, setRating] = useState(0); // Tracks the selected rating
+
+  // Handles updating the rating
+  const handleRating = (value) => {
+    setRating(value);
+  };
+
   return (
     <main>
       {<Navbar />}
@@ -204,25 +238,479 @@ const Home = () => {
             <div className="row">
               <div className="col-md-12">
                 <div>
-                <video
-                style={{
-                  borderRadius: "8px",
-                  objectFit: "cover",
-                  height: "23em",
-                  width: "100%",
-                }}
-                height={500}
-                width="100%"
-                autoPlay
-                
-                loop
-                muted
-              >
-                <source src={Vids} type="video/mp4" />
-                
-              </video>
-              
+                  <video
+                    style={{
+                      borderRadius: "8px",
+                      objectFit: "cover",
+                      height: "23em",
+                      width: "100%",
+                    }}
+                    height={500}
+                    width="100%"
+                    autoPlay
+                    loop
+                    muted
+                  >
+                    <source src={Vids} type="video/mp4" />
+                  </video>
                 </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      }
+
+      {
+        // section six
+        <section className="container-fluid background">
+          <div className="container">
+            <div className="row">
+              <div className="col-md-12 text-center">
+                <div className="d-flex gap-3 justify-content-center mt-5">
+                  <hr />
+                  <h2 className="lead">What we Offer</h2>
+                  <hr />
+                </div>
+              </div>
+            </div>
+            <div className="row">
+              <div className="col-md-1"></div>
+              <div className="col-md-10">
+                <div className="row mt-5">
+                  <div className="col-md-4 d-flex">
+                    <div className="card flex-fill">
+                      {" "}
+                      {/* Use flex-fill to make the card grow */}
+                      <h3 className="pickup">PICKUP</h3>
+                      <small className="mt-4">
+                        We pickup packages from any locations.
+                      </small>
+                      <div className="">
+                        <img
+                          className="pikupimage"
+                          width="60%"
+                          src={Pickup}
+                          alt="pickup-image"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <div className="col-md-4 d-flex">
+                    <div className="card flex-fill">
+                      <h3 className="delivery">DELIVERY</h3>
+                      <small className="mt-4">
+                        Total experience from picking up your packages to any of
+                        your destinations.
+                      </small>
+                      <div className="">
+                        <img
+                          className="pikupimage"
+                          width="60%"
+                          src={Delivery}
+                          alt="pickup-image"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <div className="col-md-4 d-flex">
+                    <div className="card flex-fill">
+                      <h3 className="errands">ERRANDS</h3>
+                      <small className="mt-4">
+                        We pickup packages from any locations.
+                      </small>
+                      <div className="">
+                        <img
+                          className="pikupimage"
+                          width="60%"
+                          src={Errands}
+                          alt="pickup-image"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="col-md-1"></div>
+            </div>
+          </div>
+        </section>
+      }
+
+      {
+        // section seven
+        <section className="container-fluid partnerBg">
+          <div className="container">
+            <div className="row"></div>
+          </div>
+        </section>
+      }
+
+      {
+        // feedback from customers
+        <section
+          className="container-fluid"
+          style={{ background: "#ff6503", position: "relative", top: "10em" }}
+        >
+          <div className="container pt-5">
+            <div className="row">
+              <div className="col-md-12">
+                <h4 className="text-white">Our Customers feedback</h4>
+                <p className=" text-white">
+                  Don’t take our word for it. Trust our customers
+                </p>
+              </div>
+              <div className="col-md-12">
+                <Carousel
+                  showDots={true}
+                  responsive={responsive}
+                  removeArrowOnDeviceType={["tablet", "mobile"]}
+                >
+                  <div
+                    style={{
+                      background: "white",
+                      width: "95%",
+                      height: "18em",
+                      padding: "19px",
+                      borderRadius: " 6px",
+                    }}
+                  >
+                    <div className="">
+                      <img
+                        className=""
+                        width={50}
+                        src={ProfilePic}
+                        alt="profile pics"
+                      />
+                      {[1, 2, 3, 4, 5].map((star) => (
+                        <span
+                          className="float-end"
+                          key={star}
+                          onClick={() => handleRating(star)}
+                          style={{
+                            cursor: "pointer",
+                            fontSize: "20px",
+                            color: star <= rating ? "#ff6503" : "grey", // Highlight selected stars
+
+                            marginRight: "5px",
+                          }}
+                        >
+                          ★
+                        </span>
+                      ))}
+                    </div>
+                    <div>
+                      <p className="fw-bolder">Ronald Richards</p>
+                      <small className="text-black">
+                        ullamco est sit aliqua dolor do amet sint. Velit officia
+                        consequat duis enim velit mollit. Exercitation veniam
+                        consequat sunt nostrud amet.
+                      </small>
+                    </div>
+                  </div>
+                  <div
+                    style={{
+                      background: "white",
+                      width: "95%",
+                      height: "18em",
+                      padding: "19px",
+                      borderRadius: " 6px",
+                    }}
+                  >
+                    <div className="">
+                      <img
+                        className=""
+                        width={50}
+                        src={ProfilePic1}
+                        alt="profile pics"
+                      />
+                      {[1, 2, 3, 4, 5].map((star) => (
+                        <span
+                          className="float-end"
+                          key={star}
+                          onClick={() => handleRating(star)}
+                          style={{
+                            cursor: "pointer",
+                            fontSize: "20px",
+                            color: star <= rating ? "#ff6503" : "grey", // Highlight selected stars
+
+                            marginRight: "5px",
+                          }}
+                        >
+                          ★
+                        </span>
+                      ))}
+                    </div>
+                    <div>
+                      <p className="fw-bolder">Savannah Nguyen</p>
+                      <small className="text-black">
+                        Amet minim mollit non deserunt ullamco est sit aliqua
+                        dolor do amet sint. Velit officia consequat duis enim
+                        velit mollit. Exercitation veniam consequat sunt nostrud
+                        amet. Amet minim mollit non deserunt ullamco est sit
+                        aliqua dolor do amet sint. Velit officia consequat duis
+                        enim velit mollit. Exercitation veniam consequat sunt
+                        nostrud amet.
+                      </small>
+                    </div>
+                  </div>
+                  <div
+                    style={{
+                      background: "white",
+                      width: "95%",
+                      height: "18em",
+                      padding: "19px",
+                      borderRadius: " 6px",
+                    }}
+                  >
+                    <div className="">
+                      <img
+                        className=""
+                        width={50}
+                        src={ProfilePic2}
+                        alt="profile pics"
+                      />
+                      {[1, 2, 3, 4, 5].map((star) => (
+                        <span
+                          className="float-end"
+                          key={star}
+                          onClick={() => handleRating(star)}
+                          style={{
+                            cursor: "pointer",
+                            fontSize: "20px",
+                            color: star <= rating ? "#ff6503" : "grey", // Highlight selected stars
+
+                            marginRight: "5px",
+                          }}
+                        >
+                          ★
+                        </span>
+                      ))}
+                    </div>
+                    <div>
+                      <p className="fw-bolder">Ronald Richards</p>
+                      <small className="text-black">
+                        ullamco est sit aliqua dolor do amet sint. Velit officia
+                        consequat duis enim velit mollit. Exercitation veniam
+                        consequat sunt nostrud amet.
+                      </small>
+                    </div>
+                  </div>
+                  <div
+                    style={{
+                      background: "white",
+                      width: "95%",
+                      height: "18em",
+                      padding: "19px",
+                      borderRadius: " 6px",
+                    }}
+                  >
+                    <div className="">
+                      <img
+                        className=""
+                        width={50}
+                        src={ProfilePic1}
+                        alt="profile pics"
+                      />
+                      {[1, 2, 3, 4, 5].map((star) => (
+                        <span
+                          className="float-end"
+                          key={star}
+                          onClick={() => handleRating(star)}
+                          style={{
+                            cursor: "pointer",
+                            fontSize: "20px",
+                            color: star <= rating ? "#ff6503" : "grey", // Highlight selected stars
+
+                            marginRight: "5px",
+                          }}
+                        >
+                          ★
+                        </span>
+                      ))}
+                    </div>
+                    <div>
+                      <p className="fw-bolder">Ronald Richards</p>
+                      <small className="text-black">
+                        ullamco est sit aliqua dolor do amet sint. Velit officia
+                        consequat duis enim velit mollit. Exercitation veniam
+                        consequat sunt nostrud amet.
+                      </small>
+                    </div>
+                  </div>
+                  <div
+                    style={{
+                      background: "white",
+                      width: "95%",
+                      height: "18em",
+                      padding: "19px",
+                      borderRadius: " 6px",
+                    }}
+                  >
+                    <div className="">
+                      <img
+                        className=""
+                        width={50}
+                        src={ProfilePic}
+                        alt="profile pics"
+                      />
+                      {[1, 2, 3, 4, 5].map((star) => (
+                        <span
+                          className="float-end"
+                          key={star}
+                          onClick={() => handleRating(star)}
+                          style={{
+                            cursor: "pointer",
+                            fontSize: "20px",
+                            color: star <= rating ? "#ff6503" : "grey", // Highlight selected stars
+
+                            marginRight: "5px",
+                          }}
+                        >
+                          ★
+                        </span>
+                      ))}
+                    </div>
+                    <div>
+                      <p className="fw-bolder">Ronald Richards</p>
+                      <small className="text-black">
+                        ullamco est sit aliqua dolor do amet sint. Velit officia
+                        consequat duis enim velit mollit. Exercitation veniam
+                        consequat sunt nostrud amet.
+                      </small>
+                    </div>
+                  </div>
+                  <div
+                    style={{
+                      background: "white",
+                      width: "95%",
+                      height: "18em",
+                      padding: "19px",
+                      borderRadius: " 6px",
+                    }}
+                  >
+                    <div className="">
+                      <img
+                        className=""
+                        width={50}
+                        src={ProfilePic1}
+                        alt="profile pics"
+                      />
+                      {[1, 2, 3, 4, 5].map((star) => (
+                        <span
+                          className="float-end"
+                          key={star}
+                          onClick={() => handleRating(star)}
+                          style={{
+                            cursor: "pointer",
+                            fontSize: "20px",
+                            color: star <= rating ? "#ff6503" : "grey", // Highlight selected stars
+
+                            marginRight: "5px",
+                          }}
+                        >
+                          ★
+                        </span>
+                      ))}
+                    </div>
+                    <div>
+                      <p className="fw-bolder">Savannah Nguyen</p>
+                      <small className="text-black">
+                        Amet minim mollit non deserunt ullamco est sit aliqua
+                        dolor do amet sint. Velit officia consequat duis enim
+                        velit mollit. Exercitation veniam consequat sunt nostrud
+                        amet. Amet minim mollit non deserunt ullamco est sit
+                        aliqua dolor do amet sint. Velit officia consequat duis
+                        enim velit mollit. Exercitation veniam consequat sunt
+                        nostrud amet.
+                      </small>
+                    </div>
+                  </div>
+                  <div
+                    style={{
+                      background: "white",
+                      width: "95%",
+                      height: "18em",
+                      padding: "19px",
+                      borderRadius: " 6px",
+                    }}
+                  >
+                    <div className="">
+                      <img
+                        className=""
+                        width={50}
+                        src={ProfilePic2}
+                        alt="profile pics"
+                      />
+                      {[1, 2, 3, 4, 5].map((star) => (
+                        <span
+                          className="float-end"
+                          key={star}
+                          onClick={() => handleRating(star)}
+                          style={{
+                            cursor: "pointer",
+                            fontSize: "20px",
+                            color: star <= rating ? "#ff6503" : "grey", // Highlight selected stars
+
+                            marginRight: "5px",
+                          }}
+                        >
+                          ★
+                        </span>
+                      ))}
+                    </div>
+                    <div>
+                      <p className="fw-bolder">Ronald Richards</p>
+                      <small className="text-black">
+                        ullamco est sit aliqua dolor do amet sint. Velit officia
+                        consequat duis enim velit mollit. Exercitation veniam
+                        consequat sunt nostrud amet.
+                      </small>
+                    </div>
+                  </div>
+                  <div
+                    style={{
+                      background: "white",
+                      width: "95%",
+                      height: "18em",
+                      padding: "19px",
+                      borderRadius: " 6px",
+                    }}
+                  >
+                    <div className="">
+                      <img
+                        className=""
+                        width={50}
+                        src={ProfilePic1}
+                        alt="profile pics"
+                      />
+                      {[1, 2, 3, 4, 5].map((star) => (
+                        <span
+                          className="float-end"
+                          key={star}
+                          onClick={() => handleRating(star)}
+                          style={{
+                            cursor: "pointer",
+                            fontSize: "20px",
+                            color: star <= rating ? "#ff6503" : "grey", // Highlight selected stars
+
+                            marginRight: "5px",
+                          }}
+                        >
+                          ★
+                        </span>
+                      ))}
+                    </div>
+                    <div>
+                      <p className="fw-bolder">Ronald Richards</p>
+                      <small className="text-black">
+                        ullamco est sit aliqua dolor do amet sint. Velit officia
+                        consequat duis enim velit mollit. Exercitation veniam
+                        consequat sunt nostrud amet.
+                      </small>
+                    </div>
+                  </div>
+                </Carousel>
+                ;
               </div>
             </div>
           </div>
