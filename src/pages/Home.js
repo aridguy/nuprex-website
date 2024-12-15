@@ -16,6 +16,7 @@ import Carousel from "react-multi-carousel";
 import ProfilePic from "../assets/profile0.png";
 import ProfilePic1 from "../assets/profile2.png";
 import ProfilePic2 from "../assets/profile3.png";
+import Que from "../assets/que.png";
 import "react-multi-carousel/lib/styles.css";
 
 const Home = () => {
@@ -39,7 +40,6 @@ const Home = () => {
     },
   };
   const [rating, setRating] = useState(0); // Tracks the selected rating
-
   // Handles updating the rating
   const handleRating = (value) => {
     setRating(value);
@@ -338,9 +338,292 @@ const Home = () => {
 
       {
         // section seven
-        <section className="container-fluid partnerBg">
+        <section
+          className="container-fluid partnerBg"
+          style={{ position: "relative", top: "14em" }}
+        >
           <div className="container">
-            <div className="row"></div>
+            <div className="row">
+              <div className="col-md-1"></div>
+              <div className="col-md-4">
+                <div className="mt-5 text-white" style={{ paddingTop: "8em" }}>
+                  <h3 className="text-white">Partner with us</h3>
+                  <small>
+                    Kindly fill in the form to partner with Nuprex on helping
+                    you with seamless operations of your business.
+                  </small>
+                </div>
+              </div>
+              <div className="col-md-6">
+                <div
+                  style={{
+                    background: "white",
+                    width: "80%",
+                    height: "",
+                    boxShadow: "rgb(0 0 0 / 16%) 0px 10px 30px", // Softer, more faded shadow
+                    borderRadius: "8px", // Optional: Rounded corners
+                    padding: "2em",
+                  }}
+                >
+                  <div className="container">
+                    <div className="row">
+                      <div className="col-md-12">
+                        <form>
+                          <p>
+                            <input
+                              type="text"
+                              placeholder="name"
+                              className="form-control"
+                            />
+                          </p>
+                          <p>
+                            <input
+                              type="email"
+                              placeholder="Email address"
+                              className="form-control"
+                            />
+                          </p>
+                          <p>
+                            <input
+                              type="text"
+                              placeholder="Phone number"
+                              className="form-control"
+                            />
+                          </p>
+                          <p>
+                            <textarea
+                              style={{ minHeight: "10em" }}
+                              type="text"
+                              placeholder="name"
+                              className="form-control"
+                            ></textarea>
+                          </p>
+                          <button
+                            className="btn text-white"
+                            style={{ background: "#ff6503", width: "151px" }}
+                          >
+                            Submit
+                          </button>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="col-md-1"></div>
+            </div>
+          </div>
+        </section>
+      }
+
+      {
+        // frequently asked question about nuprex
+        <section className="container-fluid faq" style={{zIndex: "999",}}>
+          <div className="container">
+            <div className="row">
+              <div className="col-md-5">
+                <div className="faq-content">
+                  <h3 className="text-dark text-black fw-bolder">
+                    Some of the things you <br /> may want to know
+                  </h3>
+                  <span>Explore answers without the need to</span> <br />
+                  <span> pose the questions.</span>
+                  <div className="mt-3">
+                    <img width={120} src={Que} alt="question mark icon" />
+                  </div>
+                </div>
+              </div>
+              <div className="col-md-7">
+                <div
+                  className="p-4 mt-5"
+                  style={{
+                    background: "#ffffff80",
+                    borderRadius: "8px",
+                    
+                  }}
+                >
+                  <div
+                    className="accordion accordion-flush"
+                    id="accordionFlushExample"
+                  >
+                    <div className="accordion-item">
+                      <h2 className="accordion-header">
+                        <button
+                          className="accordion-button collapsed"
+                          type="button"
+                          data-bs-toggle="collapse"
+                          data-bs-target="#flush-collapseOne"
+                          aria-expanded="false"
+                          aria-controls="flush-collapseOne"
+                        >
+                          What services does Nuprex Ltd offer?.
+                        </button>
+                      </h2>
+                      <div
+                        id="flush-collapseOne"
+                        className="accordion-collapse collapse"
+                        data-bs-parent="#accordionFlushExample"
+                      >
+                        <div className="accordion-body">
+                          Nuprex Ltd provides a range of logistics services
+                          including express deliveries, standard deliveries,
+                          warehousing, and supply chain management. We
+                          specialize in efficient and reliable delivery
+                          solutions tailored to meet your business needs.
+                        </div>
+                      </div>
+                    </div>
+                    <div className="accordion-item">
+                      <h2 className="accordion-header">
+                        <button
+                          className="accordion-button collapsed"
+                          type="button"
+                          data-bs-toggle="collapse"
+                          data-bs-target="#flush-collapseTwo"
+                          aria-expanded="false"
+                          aria-controls="flush-collapseTwo"
+                        >
+                          How can I contact Nuprex Ltd customer support?
+                        </button>
+                      </h2>
+                      <div
+                        id="flush-collapseTwo"
+                        className="accordion-collapse collapse"
+                        data-bs-parent="#accordionFlushExample"
+                      >
+                        <div className="accordion-body">
+                          Placeholder content for this accordion, which is
+                          intended to demonstrate the{" "}
+                          <code>.accordion-flush</code> class. This is the
+                          second item's accordion body. Let's imagine this being
+                          filled with some actual content.
+                        </div>
+                      </div>
+                    </div>
+                    <div className="accordion-item">
+                      <h2 className="accordion-header">
+                        <button
+                          className="accordion-button collapsed"
+                          type="button"
+                          data-bs-toggle="collapse"
+                          data-bs-target="#flush-collapseThree"
+                          aria-expanded="false"
+                          aria-controls="flush-collapseThree"
+                        >
+                          How do I create a Nuprex Ltd account?
+                        </button>
+                      </h2>
+                      <div
+                        id="flush-collapseThree"
+                        className="accordion-collapse collapse"
+                        data-bs-parent="#accordionFlushExample"
+                      >
+                        <div className="accordion-body">
+                          Placeholder content for this accordion, which is
+                          intended to demonstrate the{" "}
+                          <code>.accordion-flush</code> class. This is the third
+                          item's accordion body. Nothing more exciting happening
+                          here in terms of content, but just filling up the
+                          space to make it look, at least at first glance, a bit
+                          more representative of how this would look in a
+                          real-world application.
+                        </div>
+                      </div>
+                    </div>
+                    <div className="accordion-item">
+                      <h2 className="accordion-header">
+                        <button
+                          className="accordion-button collapsed"
+                          type="button"
+                          data-bs-toggle="collapse"
+                          data-bs-target="#flush-collapseFour"
+                          aria-expanded="false"
+                          aria-controls="flush-collapseFour"
+                        >
+                          How do I update my account information?
+                        </button>
+                      </h2>
+                      <div
+                        id="flush-collapseFour"
+                        className="accordion-collapse collapse"
+                        data-bs-parent="#accordionFlushExample"
+                      >
+                        <div className="accordion-body">
+                          Placeholder content for this accordion, which is
+                          intended to demonstrate the{" "}
+                          <code>.accordion-flush</code> class. This is the third
+                          item's accordion body. Nothing more exciting happening
+                          here in terms of content, but just filling up the
+                          space to make it look, at least at first glance, a bit
+                          more representative of how this would look in a
+                          real-world application.
+                        </div>
+                      </div>
+                    </div>
+                    <div className="accordion-item">
+                      <h2 className="accordion-header">
+                        <button
+                          className="accordion-button collapsed"
+                          type="button"
+                          data-bs-toggle="collapse"
+                          data-bs-target="#flush-collapseFive"
+                          aria-expanded="false"
+                          aria-controls="flush-collapseFive"
+                        >
+                          How do I delete my account?
+                        </button>
+                      </h2>
+                      <div
+                        id="flush-collapseFive"
+                        className="accordion-collapse collapse"
+                        data-bs-parent="#accordionFlushExample"
+                      >
+                        <div className="accordion-body">
+                          Placeholder content for this accordion, which is
+                          intended to demonstrate the{" "}
+                          <code>.accordion-flush</code> class. This is the third
+                          item's accordion body. Nothing more exciting happening
+                          here in terms of content, but just filling up the
+                          space to make it look, at least at first glance, a bit
+                          more representative of how this would look in a
+                          real-world application.
+                        </div>
+                      </div>
+                    </div>
+                    <div className="accordion-item">
+                      <h2 className="accordion-header">
+                        <button
+                          className="accordion-button collapsed"
+                          type="button"
+                          data-bs-toggle="collapse"
+                          data-bs-target="#flush-collapseSix"
+                          aria-expanded="false"
+                          aria-controls="flush-collapseSix"
+                        >
+                          What payment methods do you accept?
+                        </button>
+                      </h2>
+                      <div
+                        id="flush-collapseSix"
+                        className="accordion-collapse collapse"
+                        data-bs-parent="#accordionFlushExample"
+                      >
+                        <div className="accordion-body">
+                          Placeholder content for this accordion, which is
+                          intended to demonstrate the{" "}
+                          <code>.accordion-flush</code> class. This is the third
+                          item's accordion body. Nothing more exciting happening
+                          here in terms of content, but just filling up the
+                          space to make it look, at least at first glance, a bit
+                          more representative of how this would look in a
+                          real-world application.
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </section>
       }
@@ -349,7 +632,7 @@ const Home = () => {
         // feedback from customers
         <section
           className="container-fluid"
-          style={{ background: "#ff6503", position: "relative", top: "10em" }}
+          style={{ background: "#ff6503", position: "relative" }}
         >
           <div className="container pt-5">
             <div className="row">
@@ -710,7 +993,6 @@ const Home = () => {
                     </div>
                   </div>
                 </Carousel>
-                ;
               </div>
             </div>
           </div>

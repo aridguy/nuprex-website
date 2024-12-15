@@ -111,10 +111,28 @@ hr {
 
 /* ?partner with us */
 .partnerBg {
-  background-color: rgba(0, 0, 0, 0.651);
-  padding: 1.5em;
-  height: 300px; /* Set a fixed height */
+  background-image: url("./assets/partner.png");
+  background-size: 1000px 450px; /* Set specific width and height for the background */
+  background-repeat: no-repeat;
+  background-position: center; /* Center the image within the div */
+  padding: 5.5em;
+  height: 700px; /* Set the height of the container */
   display: flex;
   flex-direction: column;
   justify-content: space-between; /* Align content evenly */
+}
+
+/* FAQ */
+
+.faq {
+  background-color: #C7D5EF;
+  height: 32em;
+  width: 100%;
+  margin-top: 9em;
+}
+
+.faq-content {
+  position: relative;
+  top: 8em;
+  left: 3em;
 }
