@@ -21,11 +21,11 @@ const Footer = () => {
                 width: "250px",
               }}
             >
-              <p>About us</p>
-              <p>What we offer</p>
+              <p className="cursor-pointer">About us</p>
+              <p className="cursor-pointer">What we offer</p>
               <p>Careers</p>
               <p>Download our Applications</p>
-              <p>Terms of Service</p>
+              <p className="cursor-pointer">Terms of Service</p>
               <p>Privacy Policy</p>
             </div>
           </div>
@@ -120,7 +120,7 @@ const Footer = () => {
         <div className="py-5 px-5 d-flex align-items-center justify-content-between text-white ">
           <NuprexLogoFooter size={"100"} />
           <div className="d-flex gap-5">
-            <p>Terms</p> <p>Privacy</p> <p>Cookies</p>
+            <p className="cursor-pointer">Terms</p> <p className="cursor-pointer">Privacy</p> <p className="cursor-pointer">Cookies</p>
           </div>
           <div className="d-flex gap-3">
             <p>
