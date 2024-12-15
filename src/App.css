@@ -118,3 +118,22 @@ hr {
   flex-direction: column;
   justify-content: space-between; /* Align content evenly */
 }
+.weMoveGradient {
+  font-size: 72px;
+  font-weight: 800;
+  opacity: .2;
+  background: -webkit-linear-gradient(#bcb5b5, #333);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  width: 100%;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+}
+.footer-bg{
+  background-color: #0041A9;
+}
+.footer-text{
+  color: #0041A9;
+}
