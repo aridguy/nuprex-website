@@ -125,7 +125,7 @@ hr {
 /* FAQ */
 
 .faq {
-  background-color: #C7D5EF;
+  background-color: #c7d5ef;
   height: 32em;
   width: 100%;
   margin-top: 9em;
@@ -135,4 +135,41 @@ hr {
   position: relative;
   top: 8em;
   left: 3em;
+}
+
+@media only screen and (max-width: 768px) {
+  /* Styles for all mobile devices */
+  .bg-sec3 {
+    width: 100%; /* Set your desired width */
+    height: 600px; /* Set your desired height */
+    background: linear-gradient(
+      90deg,
+      rgba(233, 240, 251, 1),
+      rgba(198, 212, 238, 1)
+    );
+    border-radius: 14px;
+  }
+  .general {
+    background: linear-gradient(
+      90deg,
+      rgb(224, 243, 192),
+      rgba(207, 238, 149, 0.753)
+    );
+    width: "100%";
+    height: 26em;
+    border-radius: 8px;
+  }
+
+  .staffImg{
+    display: none;
+  }
+
+  hr{
+    display: none;
+  }
+
+  .about{
+    position: relative;
+    bottom: 9em;
+  } 
 }
