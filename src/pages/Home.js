@@ -8,6 +8,10 @@ import Sliders from "../components/Home/Sliders";
 import GetApp from "../components/Home/GetApp";
 import About from "../components/Home/About";
 import Video from "../components/Home/Video";
+import Offer from "../components/Home/Offer";
+import Partner from "../components/Home/Partner";
+
+
 
 const Home = () => {
   useEffect(() => {
@@ -79,6 +83,19 @@ const Home = () => {
         // nuprex video demo section of the application
         <div>
           <Video />
+        </div>
+      }
+      {
+        // what we offer
+        <div>
+          <Offer />
+        </div>
+      }
+
+      {
+        // what we offer
+        <div>
+          <Partner />
         </div>
       }
       {

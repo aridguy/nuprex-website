@@ -15,7 +15,7 @@ const GetApp = () => {
           data-aos-duration="1500"
         >
           <div className="container">
-            <div className="row bg-sec3" style={{padding: "4em"}}>
+            <div className="row bg-sec3" style={{ padding: "4em" }}>
               <div className="col-md-6 ">
                 <div className="text-center">
                   <span className="barlow600" style={{ fontSize: "3.5em" }}>
@@ -51,7 +51,6 @@ const GetApp = () => {
                   alt="picss"
                 />
               </div>
-              
             </div>
           </div>
         </section>
