@@ -1,11 +1,13 @@
-import React, {  useEffect } from "react";
+import React, { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import Navbar from "../components/Navbar";
-
-
 import "react-multi-carousel/lib/styles.css";
 
+import Sliders from "../components/Home/Sliders";
+import GetApp from "../components/Home/GetApp";
+import About from "../components/Home/About";
+import Video from "../components/Home/Video";
 
 const Home = () => {
   useEffect(() => {
@@ -16,13 +18,12 @@ const Home = () => {
       once: true, // Whether animation should happen only once
     });
   }, []);
- 
 
   return (
     <main>
       {<Navbar />}
       {
-        // section one
+        // our Trusted Delivery Partner
         <section>
           <div className="container">
             <div className="row mt-5">
@@ -52,6 +53,37 @@ const Home = () => {
             </div>
           </div>
         </section>
+      }
+
+      {
+        // sliding images
+        <div>
+          <Sliders />
+        </div>
+      }
+      {
+        // get nuprex application
+        <div>
+          <GetApp />
+        </div>
+      }
+
+      {
+        // about nuprex
+        <div>
+          <About />
+        </div>
+      }
+
+      {
+        // nuprex video demo section of the application
+        <div>
+          <Video />
+        </div>
+      }
+      {
+        // footer
+        //<Footer />
       }
     </main>
   );
