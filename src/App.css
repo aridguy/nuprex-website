@@ -143,6 +143,13 @@ hr {
   flex-direction: column;
   justify-content: space-between; /* Align content evenly */
 }
+.partnerForm {
+  background: white;
+  width: 80%;
+  box-shadow: rgb(0 0 0 / 16%) 0px 10px 30px;
+  border-radius: 8px;
+  padding: 2em;
+}
 /* the responsive media query of the application */
 @media only screen and (max-width: 768px) {
   /* For mobile phones: */
@@ -194,22 +201,16 @@ hr {
     flex-direction: column;
     justify-content: space-between; /* Align content evenly */
   }
+
   .partnerForm {
-    background: white;
-    width: 100%;
-    box-shadow: rgb(0 0 0 / 16%) 0px 10px 30px;
-    border-radius: 8px;
-    padding: 2em;
-  }
+    position: relative;
+    right: 4em;
+    width: 20em;
+    top: 4em;
+}
 }
 
-.partnerForm {
-  background: white;
-  width: 80%;
-  box-shadow: rgb(0 0 0 / 16%) 0px 10px 30px;
-  border-radius: 8px;
-  padding: 2em;
-}
+
 
 .weMoveGradient {
   font-size: 72px;
