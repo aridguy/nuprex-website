@@ -13,10 +13,44 @@ import Partner from "../components/Home/Partner";
 import Faq from "../components/Home/Faq";
 import Feedback from "../components/Home/Feedback";
 import Footer from "../components/Footer";
-
-
+import Swal from "sweetalert2";
+// import { useNavigate } from "react-router-dom";
 
 const Home = () => {
+  // const navigate = useNavigate();
+
+  useEffect(() => {
+    const showTermsAlert = async () => {
+      const hasAcceptedTerms = localStorage.getItem("acceptedTerms");
+
+      if (!hasAcceptedTerms) {
+        const { value: accept } = await Swal.fire({
+          title: "Terms and Policy",
+          html: `
+            <p>
+              I agree with the <a href="/terms" style="color: #ff6503;" target="_blank">terms and policy</a>.
+            </p>
+          `,
+          input: "checkbox",
+          inputValue: 1,
+          confirmButtonText: `
+            Continue&nbsp;<i class="fa fa-arrow-right"></i>
+          `,
+          inputValidator: (result) => {
+            return !result && "You need to agree with the terms and policy.";
+          },
+        });
+
+        if (accept) {
+          Swal.fire("You agreed with the terms and policy :)");
+          localStorage.setItem("acceptedTerms", "true");
+        }
+      }
+    };
+
+    showTermsAlert();
+  }, []);
+
   useEffect(() => {
     AOS.init({
       duration: 1000, // Animation duration in milliseconds
