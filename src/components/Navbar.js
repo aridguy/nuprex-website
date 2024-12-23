@@ -1,6 +1,7 @@
 import React from "react";
 import Logo from "../assets/logo.svg";
 
+
 const Navbar = () => {
   return (
     <main>
@@ -16,20 +17,23 @@ const Navbar = () => {
             alt="nuprex logo"
           />
         </a>
-        <button
-          className="ml-auto brandFont"
-          style={{
-            background: "#FF6503",
-            color: "white",
-            border: "none",
-            outline: "none",
-            borderRadius: "8px",
-            width: "144px",
-            height: "46px",
-          }}
-        >
-          Get Started
-        </button>
+        <div className="d-flex gap-2">
+          
+          <button
+            className="ml-auto brandFont"
+            style={{
+              background: "#FF6503",
+              color: "white",
+              border: "none",
+              outline: "none",
+              borderRadius: "8px",
+              width: "144px",
+              height: "46px",
+            }}
+          >
+            Get Started
+          </button>
+        </div>
       </div>
     </main>
   );

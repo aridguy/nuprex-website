@@ -31,6 +31,7 @@
   font-style: italic;
 }
 
+
 .bg-sec3 {
   width: 100%; /* Set your desired width */
   /* height: 419px;  Set your desired height */
@@ -150,6 +151,24 @@ hr {
   border-radius: 8px;
   padding: 2em;
 }
+
+/* FAQ */
+.faq {
+  background-color: #c7d5ef;
+  /* height: 32em; */
+  width: 100%;
+  margin-top: 13em;
+}
+.faq-content {
+  /* position: relative;
+  top: 8em;
+  left: 3em; */
+  text-align: center;
+  margin-top: 5em;
+  padding: 3em;
+}
+
+
 /* the responsive media query of the application */
 @media only screen and (max-width: 768px) {
   /* For mobile phones: */
@@ -207,10 +226,20 @@ hr {
     right: 4em;
     width: 20em;
     top: 4em;
+  }
+  .faq-content {
+    
+    text-align: center;
+    margin-top: 5em;
+    padding: 3em;
+  }
+  .faq {
+    background-color: #c7d5ef;
+    /* height: 32em; */
+    width: 100%;
+    margin-top: 35em;
+  }
 }
-}
-
-
 
 .weMoveGradient {
   font-size: 72px;
@@ -230,19 +259,4 @@ hr {
 }
 .footer-text {
   color: #0041a9;
-}
-
-/* FAQ */
-
-.faq {
-  background-color: #c7d5ef;
-  height: 32em;
-  width: 100%;
-  margin-top: 9em;
-}
-
-.faq-content {
-  position: relative;
-  top: 8em;
-  left: 3em;
 }

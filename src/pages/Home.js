@@ -10,6 +10,9 @@ import About from "../components/Home/About";
 import Video from "../components/Home/Video";
 import Offer from "../components/Home/Offer";
 import Partner from "../components/Home/Partner";
+import Faq from "../components/Home/Faq";
+import Feedback from "../components/Home/Feedback";
+import Footer from "../components/Footer";
 
 
 
@@ -99,8 +102,20 @@ const Home = () => {
         </div>
       }
       {
+        // what we offer
+        <div>
+          <Faq />
+        </div>
+      }
+      {
+        // what we offer
+        <div>
+          <Feedback />
+        </div>
+      }
+      {
         // footer
-        //<Footer />
+        <Footer />
       }
     </main>
   );
